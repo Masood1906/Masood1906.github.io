@@ -44,8 +44,14 @@ ul {
 }
 
 img {
-  max-width: 100%;
-  height: auto;
+  width: 230px;              /* Slightly larger than 150 for visual balance */
+  height: 230px;
+  object-fit: cover;         /* Prevent distortion */
+  border-radius: 50%;        /* Makes the image circular */
+  border: 4px solid var(--primary-color); /* Green border from your theme */
+  display: block;
+  margin: 0 auto;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* Optional shadow */
 }
 
 .container {
@@ -211,8 +217,9 @@ nav {
 }
 
 .about-content {
-  max-width: 800px;
-  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 40px;
 }
 
 .about-text {
@@ -222,22 +229,6 @@ nav {
 .about-text p {
   margin-bottom: 20px;
   font-size: 1.1rem;
-}
-
-.profile-image {
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  overflow: hidden;
-  border: 5px solid var(--primary-color);
-  box-shadow: var(--shadow);
-  margin: 0 auto 30px;
-}
-
-.profile-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
 }
 
 .about-details {
@@ -583,13 +574,7 @@ footer {
   }
 
   .about-content {
-    max-width: 800px;
-    margin: 0 auto;
-  }
-
-  .profile-image {
-    margin-right: 0;
-    margin-bottom: 30px;
+    flex-direction: column;
   }
 
   .projects-grid {
